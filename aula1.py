@@ -9,10 +9,11 @@ print(
 5 - PARA REMOVER ESPECIFICO
 6 - PARA ORDENAR A LISTA
 7 - PARA INSERIR EM UMA POSIÇÃO
+8 - PARA IMPRIMIR O PRIMEIRO
+9 - PARA IMPRIMIR O ÚLTIMO
 0 - PARA SAIR
 """
 )
-
 while True:
     
     opc = int(input("Digite uma opção: "))
@@ -46,6 +47,12 @@ while True:
         numIn = int(input("Digite o número: "))
         indexIn = int(input("Digite a posição do número: "))
         lista.insert(index)
+        
+    elif opc == 8:
+        print(lista[0])
+        
+    elif opc == 9:
+        print(lista[-1])
         
     else:
         print("Digite uma opção válida")
