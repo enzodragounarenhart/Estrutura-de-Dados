@@ -74,16 +74,19 @@ minimo = listaEx3[0]
 print(f"Máximo: {maximo}\n Mínimo: {minimo}")
 
 ## EXERCICIO 4
-
+def vogalis(text):
+    vogais = 0
+    string = "aeiouAEIOU"
+    
+    for letra in text:
+        if letra.lower() in string:
+            vogais += 1
+    return vogais
 
 print("Escreva uma palavra: ")
 palavra = input()
-listaPal = list(palavra)
 
-vogais = 0
-for letra in listaPal:
-    if letra == 'a' or item == 'e' or item == 'i' or item == 'o' or item == 'u':
-        vogais += 1
 
-print(listaPal)
-print(vogais)
+
+print(palavra)
+print(vogalis(palavra))
