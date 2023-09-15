@@ -42,7 +42,7 @@ def desempilhar_varios(lista, qtd):
                 lista.pop()
 
 def limpar():
-    time.sleep(1)
+    time.sleep(3)
     sistema = os.name
     if sistema == "nt":
         os.system("cls")
