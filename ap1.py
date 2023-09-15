@@ -33,7 +33,7 @@ def remover_ultimo(deque: list):
         return deque.pop(-1)
         
 def menu():
-    print("""/\/\/\/\/\/\ MENU /\/\/\/\/\/\
+    print("""/\/\/\/\/\/\ MENU /\/\/\/\/\/\ \n
         1 - ADICIONAR NO INICIO DO DEQUE
         2 - ADICIONAR NO FIM DO DEQUE
         3 - EXIBIR PRIMEIRO
