@@ -63,6 +63,27 @@ def merge_sort(lista: list):
             k+=1
     return lista
 
+def quick_sort(lista: list):
+    if len(lista) <=1:
+        return lista
+    else:
+        pivot = lista[-1]
+        menores = []
+        maiores = []
+
+        for x in lista[:-1]:
+            if x <= pivot:
+                maiores.append(x)
+            else:
+                menores.append(x)
+    
+    menores_ordenados = quick_sort(menores)
+    maiores_ordenados = quick_sort(maiores)
+    
+    ordenados = menores_ordenados + [pivot] + maiores_ordenados
+    print(ordenados)
+    return ordenados
+
 def aleatorio(lista: list, valor):
     while len(lista) < valor:
         aleatorio = random.randint(1, 1000)
@@ -124,5 +145,7 @@ if __name__ == "__main__":
             cronometro(insertion_sort, main_list)
         elif op == 7:
             cronometro(merge_sort, main_list)
+        elif op == 8:
+            cronometro(quick_sort, main_list)
         elif op == 9:
             main_list.clear()
