@@ -40,7 +40,7 @@ def adicionar_contato(nome, perfil_linkedin: str):
     try:
         print(perfil_linkedin)
         print("Antes check")
-        cursor.execute('SELECT * FROM contatos WHERE perfil_linkedin = %s', ({perfil_linkedin}))
+        cursor.execute('SELECT * FROM contatos WHERE perfil_linkedin = %s', (perfil_linkedin,))
         print("Passou check")
         if cursor.fetchone() is None:
             cursor.execute('INSERT INTO contatos (nome, perfil_linkedin) VALUES (%s, %s)', (nome, perfil_linkedin))
